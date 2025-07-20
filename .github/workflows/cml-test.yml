@@ -39,15 +39,12 @@ jobs:
     - name: Run model test
       run: python test.py
 
-    - name: Post CML report
-      uses: iterative/setup-cml@v2.0.1
-      with:
-        markdown: report.md
-
 
     - name: Post CML report as PR comment
-      
+      uses: iterative/setup-cml@v2
       env:
-        REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: cml comment create --publish report.md
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+          markdown: report.md
+          publish: true
     
