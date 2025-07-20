@@ -40,11 +40,12 @@ jobs:
       run: python test.py
 
 
-    - name: Post CML report as PR comment
+    - name: Setup CML
       uses: iterative/setup-cml@v2
+
+    - name: Post CML report as PR comment
       env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-          markdown: report.md
-          publish: true
+      run: cml comment create --publish report.md
+
     
