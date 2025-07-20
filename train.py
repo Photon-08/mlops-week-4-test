@@ -11,6 +11,7 @@ SOURCE_BUCKET_NAME = 'mlops_github_actions_test'
 SOURCE_FILE_NAME = 'data/iris.csv'  # CSV must have features + target
 DEST_BUCKET_NAME = 'mlops_github_actions_test'
 MODEL_FILENAME = 'iris_model.joblib'
+# to trigger the actions
 
 # Local file paths
 LOCAL_DATA_PATH = '/tmp/iris.csv'
