@@ -1,0 +1,38 @@
+name: CML Model Test
+
+on:
+  push:
+    branches: [dev-branch]
+  
+
+jobs:
+  model-test:
+    runs-on: ubuntu-latest
+
+    env:
+      GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/mlops-week-4-test/mlops-week-4-test/test_key.json
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Set up GCP Credentials
+      run: echo "${{ secrets.GCP_KEY_JSON }}" > $GOOGLE_APPLICATION_CREDENTIALS
+
+    - name: Run model test
+      run: python test_model.py
+
+    - name: Post CML report
+      uses: iterative/cml@v2
+      with:
+        markdown: report.md
