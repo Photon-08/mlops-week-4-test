@@ -7,6 +7,8 @@ from google.cloud import storage
 import joblib
 
 from train import upload_blob  # You can import other helper functions too
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "banded-cumulus-466503-q7-5b181666fb91.json"
+
 
 # Setup logging
 logging.basicConfig(
