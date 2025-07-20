@@ -29,6 +29,8 @@ jobs:
 
     - name: Set up GCP credentials
       run: echo "${{ secrets.GCP_KEY_JSON }}" > $GOOGLE_APPLICATION_CREDENTIALS
+    - name: Show file structure
+      run: ls -R
 
     - name: Run model test
       run: python test_model.py
