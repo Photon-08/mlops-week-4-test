@@ -1,0 +1,52 @@
+name: CML Model Test
+
+on:
+  push:
+    branches: [dev-branch]
+  pull_request:
+    branches: [dev-branch]
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  model-test:
+    runs-on: ubuntu-latest
+
+    env:
+      GOOGLE_APPLICATION_CREDENTIALS: ${{ github.workspace }}/test_key.json
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Set up GCP credentials
+      run: echo "${{ secrets.GCP_KEY_JSON }}" > $GOOGLE_APPLICATION_CREDENTIALS
+    - name: Show file structure
+      run: ls -R
+    - name: Decode GCP credentials
+      run: echo "${{ secrets.GCP_KEY_BASE64 }}" | base64 --decode > test_key.json
+
+    - name: Run model test
+      run: python test.py
+
+
+    - name: Setup CML
+      uses: iterative/setup-cml@v2
+
+    - name: Post CML report as PR comment
+      env:
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: cml comment create --publish report.md
+
+    

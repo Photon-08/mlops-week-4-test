@@ -11,10 +11,14 @@ SOURCE_BUCKET_NAME = 'mlops_github_actions_test'
 SOURCE_FILE_NAME = 'data/iris.csv'  # CSV must have features + target
 DEST_BUCKET_NAME = 'mlops_github_actions_test'
 MODEL_FILENAME = 'iris_model.joblib'
+# to trigger the actions
 
 # Local file paths
 LOCAL_DATA_PATH = '/tmp/iris.csv'
 LOCAL_MODEL_PATH = f'/tmp/{MODEL_FILENAME}'
+
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "test_key.json"
+
 
 def download_blob(bucket_name, source_blob_name, destination_file_name):
     """Download a blob from the bucket."""
@@ -42,7 +46,7 @@ def train_model(data_path):
     
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    model = RandomForestClassifier(n_estimators=100, random_state=42)
+    model = RandomForestClassifier(n_estimators=50, random_state=42)
     model.fit(X_train, y_train)
 
     preds = model.predict(X_test)
