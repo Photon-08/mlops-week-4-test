@@ -44,7 +44,8 @@ jobs:
 
 
     - name: Post CML report as PR comment
-      run: cml comment create --pr report.md
+      
       env:
         REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: cml comment create --publish report.md
     
