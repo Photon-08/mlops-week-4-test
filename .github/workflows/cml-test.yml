@@ -41,15 +41,9 @@ jobs:
       uses: iterative/setup-cml@v2.0.1
       with:
         markdown: report.md
-    - name: Post README.md as comment
-      run: |
-        cml comment create --publish report.md
+
+
+    - name: Post CML report as PR comment
+      run: cml comment --pr --publish report.md
       env:
         REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Create PR to main if it doesn't exist
-      run: |
-        gh pr list --base main --head dev-branch | grep -q . || \
-        gh pr create --base main --head dev-branch --title "Auto PR: Merge dev-branch → main" --body "Model test passed. Automatically opening pull request to merge dev-branch into main."
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
