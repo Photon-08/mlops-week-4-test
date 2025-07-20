@@ -43,7 +43,7 @@ jobs:
         markdown: report.md
     - name: Post README.md as comment
       run: |
-        cml comment create README.md
+        cml comment create --publish report.md
       env:
         REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
