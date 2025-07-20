@@ -34,6 +34,6 @@ jobs:
       run: python test_model.py
 
     - name: Post CML report
-      uses: iterative/cml@v0.5.1
+      uses: iterative/setup-cml@v2.0.1
       with:
         markdown: report.md
