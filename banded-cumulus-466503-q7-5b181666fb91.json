@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "banded-cumulus-466503-q7",
+  "private_key_id": "5b181666fb91aad04fe6fc04c02a49195cc7d5e8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDXxFOEsGtHaCKg\nGR1ny5ZxC4nE3IDG8Y4ng5LlhCs07yrxzkVf2Bc7bhkk4IPyI1mU3Qyl38Z/zvC1\n53j1XcTDlZEALZRUwznYcZWW6TyhNE5NC78WRUX5hYuld1QpJ6cAAMK8W986wAls\nB3aY63QfXZvRJkPgBCHnUDsytD9KbbDh24foMW2KkOlIMSNhaKIV7v8ZpJm6b45Z\nyNDz+XPHyujcC8T5IwwfPCYk05GOaliOqOj+GmMy8oQ8IQLM9iYRw6YWjHn+CqoM\nsQNBTkevRhlPq2GRV/WXN5X18BRS0oD8xFkv8+kNIDVWhXJAkN+T1Xw1MG9vCPhe\nJ/PN3BApAgMBAAECggEAV0HawrzzzY9j/VnaxfiT0QipAPdpjsruQbWYiQAf1wrn\n050m+iEyGAMo4Px478ny9txEOqqaJGLEftPq21O9+Ji6aJeGNpczBAC/TaXqMoks\nJ0VaVD/Ukhm7RUHSQ8h45WvpVPJUfvZdeRY1lJcXwX2CP51ZcrVJHroYDqPNOqQO\ne5+W/VVPnmRV53P5dPlR+ptWspcF5IF71gTKtKIdY8Cg18goMeJlsouOF5IJyPTM\n4JsVOfkWQeTmjYjw5E4wLlhiwcJD/ChQqYhYbhUdz93O5QDGG1guUgRYBGUkroco\namaJ2nMHcsM1TU0IOXdDRUoKjM7mB/kDfGOq2IztPwKBgQDtchDAmREjC/JZK6hI\nQxcwdn+8c66q+XuQ2MQbadN2G28qZB2QbiWJriiqc7UhXmFBeB7XZHAuuJxxDzxP\nftwmMLKIbfGp8ULc7o4URxg9ipG2zkvIp60gJpAjuUzxaBJHW33aWCRtdOrs+aT2\nBHeqMVWr1C9gA+P5bHcMlFkpcwKBgQDooJgRMnb1LvdO0qOJBXoiHVaCwuH6Iv6B\ndjak/8iT2Dhd2+gyj/pyYk4N/McCoRvkqx7vuuYYEhWCV7Pa4/nqvWoaqu/r6FL5\n5NpjoYy8ZIG0rpdEOHpc34x0G8GREBqrLU8DKcTjQ0xcyq2nbibtUBh9+8DLgbK1\ntHSm/VFo8wKBgFNfzgoStTW9KCevcLOO+0GFGm0toZNfbsf5lUKa8ilykKIt7UOd\nqYiiopzXbC5/WV8HsqynE80T/bqlQuQXA25VgxrsoAKwOG4jRbhRDm3tjiTGY03d\nsqirYclpc18A0ApGUfatJH1apHL5ZbcM8ofMMuzW4JuyQgZ+036TSIuJAoGATAKd\nbZEVuYt9F25QLSdy/s6jQ9q1x+vDST39IPDK8zQFRvXh6xOMe++PHZbo1/0YhiE7\n3I0vPdI64PoTNISlVoRJtSkBeA3Tfv++NCvHNo+IqicaGhpyMQKCfDXNi769WA1X\n8eqmALQusWswTrL5WTWAqzmlh1l7sU+jhiTjgu0CgYEAqybyPEqM5mOc2nxjHunu\ngg43YvjB5ZhYzLNJ1YCPKy4HdYBxZHjkhsBRcNlq27VvrBobtwYyJR61VGsSQ3Dl\nKlnDTBFUPfxayw8Ec3XwDGwNEKv0xNXTMl7zef0rFsTsrXjPO/xcyiVqmRD81k1L\ng+2SyWm7Pwlce6uprFEy7i0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "mlops-wk4-github-acitons-test@banded-cumulus-466503-q7.iam.gserviceaccount.com",
+  "client_id": "112232409839099240716",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mlops-wk4-github-acitons-test%40banded-cumulus-466503-q7.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
