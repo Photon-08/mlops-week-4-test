@@ -31,6 +31,8 @@ jobs:
       run: echo "${{ secrets.GCP_KEY_JSON }}" > $GOOGLE_APPLICATION_CREDENTIALS
     - name: Show file structure
       run: ls -R
+    - name: Decode GCP credentials
+      run: echo "${{ secrets.GCP_KEY_BASE64 }}" | base64 --decode > test_key.json
 
     - name: Run model test
       run: python test.py
