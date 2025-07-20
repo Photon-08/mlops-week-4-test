@@ -16,7 +16,7 @@ MODEL_FILENAME = 'iris_model.joblib'
 LOCAL_DATA_PATH = '/tmp/iris.csv'
 LOCAL_MODEL_PATH = f'/tmp/{MODEL_FILENAME}'
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "banded-cumulus-466503-q7-5b181666fb91.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "test_key.json"
 
 
 def download_blob(bucket_name, source_blob_name, destination_file_name):
