@@ -5,9 +5,13 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 from sklearn.model_selection import train_test_split
 from google.cloud import storage
 import joblib
+import json
 
 from train import upload_blob  # You can import other helper functions too
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "test_key.json"
+
+with open("test_key.json", 'r') as file:
+        data = json.load(file)
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = data
 
 
 # Setup logging
