@@ -6,7 +6,8 @@ on:
   pull_request:
     branches: [dev-branch]
 permissions:
-  contents: write
+  contents: read
+  pull-requests: write
 
 jobs:
   model-test:
