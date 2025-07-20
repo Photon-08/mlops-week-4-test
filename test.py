@@ -77,6 +77,26 @@ def test_model_accuracy_threshold():
     # Step 5: Assert minimum acceptable accuracy
     assert acc >= 0.70, f"Test failed: Accuracy {acc:.2f} is below 70% threshold."
     logging.info("✅ Model test passed.")
+    return acc, precision, recall, f1
+
+
+
+def generate_report(acc, precision, recall, f1):
+    report = f"""
+    ## 🧪 Model Evaluation Report
+
+    - **Accuracy:** {acc:.2f}
+    - **Precision:** {precision:.2f}
+    - **Recall:** {recall:.2f}
+    - **F1 Score:** {f1:.2f}
+
+    """
+    with open("report.md", "w") as f:
+        f.write(report)
+
 
 if __name__ == "__main__":
-    test_model_accuracy_threshold()
+    acc, precision, recall, f1=test_model_accuracy_threshold()
+    # Add this inside the test function after computing metrics
+    generate_report(acc, precision, recall, f1)
+    
