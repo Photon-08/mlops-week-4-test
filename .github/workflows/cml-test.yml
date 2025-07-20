@@ -33,7 +33,7 @@ jobs:
       run: ls -R
 
     - name: Run model test
-      run: python test_model.py
+      run: python test.py
 
     - name: Post CML report
       uses: iterative/setup-cml@v2.0.1
